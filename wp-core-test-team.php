@@ -5,7 +5,7 @@
  * Author:      WordPress Test Team
  * Author URI:  https://make.wordpress.org/test/
  * License:     GPLv2 or later
- * Version:     0.0.1
+ * Version:     0.0.2
  *
  * @package WPCoreTestTeamSuite
  */
