@@ -34,7 +34,7 @@ if ( ! function_exists( 'WPCoreTestTeamSuite\init' ) ) {
 	/**
 	 * Initialize the settings screen.
 	 *
-	 * @since 1.0.0
+	 * @since 0.0.1
 	 */
 	function init() {
 		if ( ! class_exists( 'WPCoreTestTeamSuite\Admin\Settings' ) ) {

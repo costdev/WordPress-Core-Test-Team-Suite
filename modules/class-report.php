@@ -2,7 +2,7 @@
 /**
  * A class to generate a test report.
  *
- * @since 1.0.0
+ * @since 0.0.1
  *
  * @package WPCoreTestTeamSuite\Modules
  */
@@ -14,7 +14,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Generate a test report.
  *
- * @since 1.0.0
+ * @since 0.0.1
  */
 class Report {
 	/**
@@ -55,7 +55,7 @@ class Report {
 	/**
 	 * Constructor.
 	 *
-	 * @since 1.0.0
+	 * @since 0.0.1
 	 */
 	public function __construct() {
 		$this->get_os();
@@ -70,7 +70,7 @@ class Report {
 	 *
 	 * @global $wp_version The WordPress version.
 	 *
-	 * @since 1.0.0
+	 * @since 0.0.1
 	 *
 	 * @return string The test report.
 	 */
@@ -100,7 +100,7 @@ class Report {
 	/**
 	 * Get the operating system name.
 	 *
-	 * @since 1.0.0
+	 * @since 0.0.1
 	 *
 	 * @return string The operating system name.
 	 */
@@ -150,7 +150,7 @@ class Report {
 	/**
 	 * Get details about the server.
 	 *
-	 * @since 1.0.0
+	 * @since 0.0.1
 	 *
 	 * @return string Details about the server.
 	 */
@@ -180,7 +180,7 @@ class Report {
 	/**
 	 * Get details about the browser.
 	 *
-	 * @since 1.0.0
+	 * @since 0.0.1
 	 *
 	 * @return string Details about the browser.
 	 */
@@ -221,7 +221,7 @@ class Report {
 	/**
 	 * Get the current theme's name.
 	 *
-	 * @since 1.0.0
+	 * @since 0.0.1
 	 *
 	 * @return string The current theme's name.
 	 */
@@ -240,7 +240,7 @@ class Report {
 	/**
 	 * Get the active plugins, excluding this plugin.
 	 *
-	 * @since 1.0.0
+	 * @since 0.0.1
 	 *
 	 * @return string The active plugins.
 	 */

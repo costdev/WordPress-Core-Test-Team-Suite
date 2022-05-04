@@ -2,7 +2,7 @@
 /**
  * A class to manage the settings screen.
  *
- * @since 1.0.0
+ * @since 0.0.1
  *
  * @package WPCoreTestTeamSuite\Admin
  */
@@ -14,13 +14,13 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Display the settings screen.
  *
- * @since 1.0.0
+ * @since 0.0.1
  */
 class Settings {
 	/**
 	 * The default tabs.
 	 *
-	 * @since 1.0.0
+	 * @since 0.0.1
 	 *
 	 * @var array $tabs
 	 */
@@ -29,7 +29,7 @@ class Settings {
 	/**
 	 * Constructor.
 	 *
-	 * @since 1.0.0
+	 * @since 0.0.1
 	 */
 	public function __construct() {
 		$default_tabs = array(
@@ -41,7 +41,7 @@ class Settings {
 		 *
 		 * Make sure that you create `admin/tabs/tab-{slug}.php` for each new tab.
 		 *
-		 * @since 1.0.0
+		 * @since 0.0.1
 		 *
 		 * @param array $default_tabs The default tabs in `'slug' => 'Label'` format.
 		 */
@@ -67,7 +67,7 @@ class Settings {
 	/**
 	 * Get the current tab.
 	 *
-	 * @since 1.0.0
+	 * @since 0.0.1
 	 *
 	 * @return string The current tab.
 	 */
@@ -88,7 +88,7 @@ class Settings {
 	/**
 	 * Wrap a tab's content.
 	 *
-	 * @since 1.0.0
+	 * @since 0.0.1
 	 */
 	public function display_current_tab() {
 		$default_wrapper_start = '<div class="wrap"><h1>WordPress Core Test Team Suite</h1>';
@@ -97,7 +97,7 @@ class Settings {
 		/**
 		 * Filter the start of the wrapper.
 		 *
-		 * @since 1.0.0
+		 * @since 0.0.1
 		 *
 		 * @param string $default_wrapper_start The default start of the wrapper.
 		 *                                      Default: `<div class="wrap">`.
@@ -107,7 +107,7 @@ class Settings {
 		/**
 		 * Filter the end of the wrapper.
 		 *
-		 * @since 1.0.0
+		 * @since 0.0.1
 		 *
 		 * @param string $default_wrapper_end The default end of the wrapper.
 		 *                                    Default: `</div>`.
@@ -129,7 +129,7 @@ class Settings {
 	/**
 	 * Get tabbed navigation.
 	 *
-	 * @since 1.0.0
+	 * @since 0.0.1
 	 *
 	 * @return string The tabbed navigation.
 	 */
@@ -140,7 +140,7 @@ class Settings {
 		/**
 		 * Filter the start of the tabbed navigation wrapper.
 		 *
-		 * @since 1.0.0
+		 * @since 0.0.1
 		 *
 		 * @param string $default_wrapper_start The default start of the tabbed navigation wrapper.
 		 *                                      Default: `<nav class="nav-tab-wrapper">`.
@@ -150,7 +150,7 @@ class Settings {
 		/**
 		 * Filter the end of the tabbed navigation wrapper.
 		 *
-		 * @since 1.0.0
+		 * @since 0.0.1
 		 *
 		 * @param string $default_wrapper_end The default end of the tabbed navigation wrapper.
 		 *                                    Default: `</nav>`.
@@ -177,7 +177,7 @@ class Settings {
 			/**
 			 * Filter the classes for navigation tabs.
 			 *
-			 * @since 1.0.0
+			 * @since 0.0.1
 			 *
 			 * @param array  $default_classes The default navigation tab classes.
 			 *                                Default: `array( 'nav-tab' )`
@@ -196,7 +196,7 @@ class Settings {
 				/**
 				 * Filter the class used to indicate the current class.
 				 *
-				 * @since 1.0.0
+				 * @since 0.0.1
 				 *
 				 * @param string $default_current_class The default current class.
 				 *                                      Default: 'nav-tab-active'.
