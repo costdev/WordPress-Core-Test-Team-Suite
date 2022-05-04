@@ -187,6 +187,8 @@ class Report {
 	private function get_browser() {
 		global $is_lynx, $is_gecko, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_IE, $is_edge;
 
+		$agent = sanitize_text_field( wp_unslash( $_SERVER['HTTP_USER_AGENT'] ) );
+
 		$this->browser = __( 'Could not determine.' );
 		$browsers      = array(
 			'Lynx'              => $is_lynx,
@@ -197,6 +199,7 @@ class Report {
 			'Internet Explorer' => $is_IE,
 			'Edge'              => $is_edge,
 			'Chrome'            => $is_chrome,
+			'Firefox'           => false !== stripos( $agent, 'Firefox' ),
 		);
 		$filtered      = array_filter( $browsers );
 
@@ -207,11 +210,6 @@ class Report {
 		$browser       = array_keys( $filtered );
 		$this->browser = end( $browser );
 
-		if ( empty( $_SERVER['HTTP_USER_AGENT'] ) ) {
-			return $this->browser;
-		}
-
-		$agent = sanitize_text_field( wp_unslash( $_SERVER['HTTP_USER_AGENT'] ) );
 		preg_match( '/' . $this->browser . '\/([0-9\.\-]+)/', $agent, $version );
 
 		$this->browser .= $version ? ' ' . $version[1] : '';
