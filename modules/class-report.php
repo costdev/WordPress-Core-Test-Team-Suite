@@ -138,7 +138,7 @@ class Report {
 			'/win98/i'              => 'Windows 98',
 			'/win95/i'              => 'Windows 95',
 			'/win16/i'              => 'Windows 3.11',
-			'/macintosh|mac os x/i' => 'Mac OS X',
+			'/macintosh|mac os x/i' => 'macOS',
 			'/mac_powerpc/i'        => 'Mac OS 9',
 			'/linux/i'              => 'Linux',
 			'/ubuntu/i'             => 'Ubuntu',
