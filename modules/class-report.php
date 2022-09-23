@@ -91,11 +91,11 @@ class Report {
 		== Test Report
 
 		=== Environment
+		* OS: $this->os
 		* Server: $this->server
 		* PHP: $this->php_version
 		* WordPress: $wp_version
 		* Browser: $this->browser
-		* OS: $this->os
 		* Theme: $this->theme
 		* Plugins: $this->plugins
 
