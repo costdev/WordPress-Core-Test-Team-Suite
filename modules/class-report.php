@@ -99,7 +99,7 @@ class Report {
 		* Theme: $this->theme
 		* Plugins: $this->plugins
 
-		=== Steps
+		=== Steps to Test #StepstoTest
 		1.&nbsp;
 
 		=== Results
