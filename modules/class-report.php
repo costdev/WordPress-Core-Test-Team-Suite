@@ -15,6 +15,7 @@ defined( 'ABSPATH' ) || exit;
  * Generate a test report.
  *
  * @since 0.0.1
+ * @since 0.0.2 Add PHP version.
  */
 class Report {
 	/**
@@ -30,6 +31,13 @@ class Report {
 	 * @var string $server
 	 */
 	private $server = '';
+
+	/**
+	 * The PHP version.
+	 *
+	 * @var string $php_version
+	 */
+	private $php_version = '';
 
 	/**
 	 * The browser.
@@ -56,10 +64,12 @@ class Report {
 	 * Constructor.
 	 *
 	 * @since 0.0.1
+	 * @since 0.0.2 Add PHP version.
 	 */
 	public function __construct() {
 		$this->get_os();
 		$this->get_server();
+		$this->get_php_version();
 		$this->get_browser();
 		$this->get_theme();
 		$this->get_plugins();
@@ -71,6 +81,7 @@ class Report {
 	 * @global $wp_version The WordPress version.
 	 *
 	 * @since 0.0.1
+	 * @since 0.0.2 Include PHP version in report.
 	 *
 	 * @return string The test report.
 	 */
@@ -80,14 +91,15 @@ class Report {
 		== Test Report
 
 		=== Environment
+		* OS: $this->os
 		* Server: $this->server
+		* PHP: $this->php_version
 		* WordPress: $wp_version
 		* Browser: $this->browser
-		* OS: $this->os
 		* Theme: $this->theme
 		* Plugins: $this->plugins
 
-		=== Steps
+		=== Steps to Test #StepstoTest
 		1.&nbsp;
 
 		=== Results
@@ -126,7 +138,7 @@ class Report {
 			'/win98/i'              => 'Windows 98',
 			'/win95/i'              => 'Windows 95',
 			'/win16/i'              => 'Windows 3.11',
-			'/macintosh|mac os x/i' => 'Mac OS X',
+			'/macintosh|mac os x/i' => 'macOS',
 			'/mac_powerpc/i'        => 'Mac OS 9',
 			'/linux/i'              => 'Linux',
 			'/ubuntu/i'             => 'Ubuntu',
@@ -175,6 +187,19 @@ class Report {
 		$this->server = end( $server ) . ' (' . PHP_OS . ')';
 
 		return $this->server;
+	}
+
+	/**
+	 * Get the PHP version.
+	 *
+	 * @since 0.0.2
+	 *
+	 * @return string PHP version.
+	 */
+	private function get_php_version() {
+		$this->php_version = phpversion();
+
+		return $this->php_version;
 	}
 
 	/**
